@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTN77T75XQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FTN77T75XQ');
+</script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Now || HT Tourism</title>
+   <!-- Style Sheet -->
+   <link rel="stylesheet" media="screen and (min-width:1201px)" href="./css/desktop.css">
+   <link rel="stylesheet" media="(min-width:769px) and (max-width:1200px)" href="./css/normal.css">
+   <link rel="stylesheet" media="(min-width:501px) and (max-width:769px)" href="./css/tablet.css">
+   <link rel="stylesheet" media="screen and (max-width:500px)" href="./css/smartphone.css">
+  <!-- Flaticon -->
+  <link rel="icon" type="image/x-icon" href="./icon/new-updated-ht-tourism-logo.svg">
+<body>
+    <!-- NavBar -->
+    <header>
+      <div class="navbar">
+        <div class="left-image">
+          <ul class="left-navbar"> 
+            <li><a  href="./index.html" id="logo"><img src="./icon/new-updated-ht-tourism-logo.svg" alt="HT Tourism Logo"></a></li>
+          </ul>
+        </div>
+        <div class="right-navbar">
+          <div class="dropdown">
+            <p><img src="./img/menu.png" alt="Menu Icon"></p>
+            <ul class="dropdown-content">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./deals.html">Holiday Deals</a></li>
+                <li><a href="./book.html">Book Now</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a class="none" href="https://www.coronavirus.vic.gov.au/" target="_blank">Covid-19 Information</a></li>
+                <li><a href="./bookjpn.html">Change to Japanese</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  <!-- Booking page heading -->
+  <section class="booknow-heading">
+    <div class="booking-page">
+    <h1>Book <span>Now</span></h1>
+    <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "httourism";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+if(!$conn){
+  die ("Connection Failed:" . mysqli_connect_error());
+} else {
+  $holidaydeal = mysqli_real_escape_string($conn, $_POST['holiday-deal']);
+  $adults = mysqli_real_escape_string($conn, $_POST['adults']);
+  $children = mysqli_real_escape_string($conn, $_POST['children']);
+  $startdate = mysqli_real_escape_string($conn, $_POST['start-date']);
+  $enddate = mysqli_real_escape_string($conn, $_POST['end-date']);
+  $firstname = mysqli_real_escape_string($conn, $_POST['first-name-book']);
+  $lastname = mysqli_real_escape_string($conn, $_POST['last-name-book']);
+  $email = mysqli_real_escape_string($conn, $_POST['email-book']);
+  $phone = mysqli_real_escape_string($conn, $_POST['phone-book']);
+
+  $sql = "INSERT INTO booknow VALUES (NULL,'$holidaydeal' , '$adults' , '$children' , '$startdate' , '$enddate' , '$firstname' , '$lastname' , '$email' , '$phone');";
+
+  $result = mysqli_query($conn, $sql);
+
+  if($result !== true) {
+    echo "<p style='color:#be123c;font-weight:600;margin-top:1rem;margin-bottom:1rem;text-align:center;background-color:#ef4444:padding;1rem'>Opps - Something went wrong. Please fill out all required fields and submit the form again.<p>";
+  } else {
+    echo "<p style='color:2A2B2B;font-weight:600;margin-top:1rem;margin-bottom:1rem;text-align:center;background-color:#bef264;padding:1rem'>Thank you " . $_POST['first-name-book'] . " for booking your Hokkaido holiday with HT Tourism. You will receive an email shortly confirming your booking for " . $_POST['holiday-deal'] . " starting from the " . $_POST['start-date'] . " to the " . $_POST['end-date']. ".<p>";
+  }
+}
+$conn->close();
+?>
+        <form action="booknow.php" method="post">
+          <div class="holiday-deal-class">
+            <p>Please chose you HT Holiday Deal</p>
+            <label for="holiday-deal">Holiday Deal Package: </label>
+            <select name="holiday-deal" id="holiday-deal">
+            <option value="Deal One">Deal One</option>
+            <option value="Deal Two">Deal Two</option>
+            <option value="Deal Three">Deal Three</option>
+            <option value="Deal Four">Deal Four</option>
+            <option value="Deal Five">Deal Five</option>
+            <option value="Deal Six">Deal Six</option>
+            </select>
+          </div>
+          <div class="adult-child-number">
+          <p>Who's coming on this adventure?</p>
+         <label for="number-adults">Adults: </label>
+         <select name="adults" id="number-adults">
+         <option value="one-adult">1</option>
+         <option value="two-adult">2</option>
+          <option value="three-adult">3</option>
+          <option value="four-adult">4</option>
+      <option value="five-adult">5</option>
+      <option value="other-adult">6+</option>
+    </select>
+    <label for="number-children">Children (Under 18s): </label>
+    <select name="children" id="number-children">
+      <option value="zero-child">0</option>
+      <option value="one-child">1</option>
+      <option value="two-child">2</option>
+      <option value="three-child">3</option>
+      <option value="four-child">4</option>
+      <option value="five-child">5</option>
+      <option value="other-child" id="other-child">6+</option>
+    </select>
+  </div>
+
+          <p>How many days?</p>
+          <label for="start-date">Start Date: </label>
+          <input type="date" id="start-date" name="start-date" min="2022-08-25" max="2024-12-31">
+          <label for="end-date">End Date: </label>
+          <input type="date" id="end-date" name="end-date" min="2022-08-26" max="2025-01-07"> <br>
+          <p>Let's find out about you!</p>
+          <label for="first-name">First Name: </label>
+          <input type="text" id="first-name" name="first-name-book" placeholder="Enter First Name">
+          <label for="last-name">Last Name: </label>
+          <input type="text" id="last-name" name="last-name-book" placeholder="Enter Last Name">
+          <label for="email">Email: </label>
+          <input type="email" id="email" placeholder="Enter Email" name="email-book">
+          <label for="ph-number" id="phone-number">Phone Number: </label>
+          <input type="text" id="ph-number" placeholder="Enter Phone Number" name="phone-book">
+          <input type="submit" name="submit">
+          <p class="term-conditions"><a href="https://edoc.lawpath.com/d-zd-ZbXbd-WcrRESEYYwC" target="_blank">HT Tourism Terms and Conditions</a></p>
+        </form>
+        <div class="book-title">
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Float Clear -->
+  <div class="float-clear"></div>
+
+  <!-- Social Media Icons -->
+   <div class="social-media">
+    <a href="https://www.facebook.com/pages/Hokkaido/108581545842039" target="_blank"><img class="social-logo" src="./social-media/facebook.png" alt="Facebook Logo"></a>
+    <a href="https://www.instagram.com/hokkaidotourismht/" target="_blank"><img class="social-logo" src="./social-media/instagram.png" alt="Instagram Logo"></a>
+    <a href="https://twitter.com/search?q=%23HOKKAIDO" target="_blank"><img class="social-logo" src="./social-media/twitter.png" alt="Twitter Logo"></a>
+   </div>
+
+
+     <!-- Top Page Arrow -->
+  <div class="top-page">
+    <a href="#top"><img class="social-logo" src="./img/arrow-up.png" alt="Up Arrow"></a>
+  </div>
+<!-- Footer -->
+<footer>
+  <div class="social-media-footer">
+    <div>
+      <a href="https://www.facebook.com/pages/Hokkaido/108581545842039" target="_blank"><img class="social-logo-footer" src="./social-media/facebook.png" alt="Facebook Logo"></a>
+      <a href="https://www.instagram.com/hokkaidotourismht/" target="_blank"><img class="social-logo-footer" src="./social-media/instagram.png" alt="Instagram Logo"></a>
+      <a href="https://twitter.com/search?q=%23HOKKAIDO" target="_blank"><img class="social-logo-footer" src="./social-media/twitter.png" alt="Twitter Logo"></a>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Company Address: </th>
+        <th>Phone Number: </th>
+        <th>Email: </th>
+      </tr>
+    </thead>
+ <tbody>
+  <tr>
+    <td>1117 Nepean Hwy, Highett VIC 3190</td>
+    <td>(03) 8001 8189</td>
+    <td>inquiries@hokkaidotourismht.com.au</td>
+  </tr>
+ </tbody>
+  </table>
+  <p>Hokkaido Tourism Pty Ltd &copy; 2022</p>
+  <a class="covid-footer" href="./contact.html">Contact Us</a>
+ <a class="covid-footer" href="https://www.coronavirus.vic.gov.au/" target="_blank">Covid-19 Information</a>
+<a class="credit-link" href="./credit.html">Website Credits</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ body, html {
+  font-family: 'Montserrat', 'Ariel', sans-serif;
+ }
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.float-clear {
+  clear: both;
+}
+
+  /* colourings */
+.bg-pink {
+  background-color: #fb7185;
+}
+
+.bg-black {
+  background-color: #2A2B2B;
+  color: #fb7185;
+}
+/* Buttons */
+.btn {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+}
+
+.btn-dark {
+  background-color: #2A2B2B;
+}
+
+.btn-dark:hover {
+  color: #2A2B2B;
+  background-color: #ffffff;
+}
+
+.btn-light {
+  background-color: #fb7185;
+}
+
+.btn-light:hover {
+  color: #fb7185;
+  background-color: #ffffff;
+}
+
+.btn-pink-hover:hover {
+  background-color: #fb7185;
+}
+/* Navbar */
+.navbar {
+  background-color: #2A2B2B;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.navbar .left-navbar {
+  display: none;
+}
+
+.navbar .right-navbar li, .navbar .left-navbar li {
+  list-style: none;
+  display: inline;
+  margin-bottom: 1rem;
+}
+
+.dropdown img {
+  display: none;
+}
+
+.none {
+  display: none;
+}
+
+.navbar .right-navbar li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9em;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.navbar .right-navbar li a:hover {
+  color: #2A2B2B;
+  background-color: #fb7185;
+  transform: scale(1.2);
+}
+/* Home page image */
+
+#main-home-image img {
+  width: 100%;
+}
+
+#main-home-info {
+  text-align: center;
+}
+#main-home-info h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#main-home-info h1 span {
+  color: #fb7185;
+  text-decoration: underline;
+}
+#main-home-info p {
+  margin-bottom: 0.7rem;
+}
+/* Home info section */
+.three-box-home {
+  text-align: center;
+}
+.box {
+  height: 20rem;
+}
+.three-box-home .home-icons {
+  width: 4.5rem;
+  margin-top: 1.5rem;
+}
+.box h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.box p {
+ font-size: 0.9em;
+ margin-bottom: 3rem;
+}
+.box label {
+  font-weight: 600;
+  float: left;
+  margin-left: 3rem;
+  margin-top: 0.5rem;
+}
+
+.box #email-promo {
+  padding: 0.5rem;
+  width: 65%;
+  border: #2A2B2B solid 1px;
+  border-radius: 5px;
+}
+
+.box #email-promo:target {
+  background-color: #2A2B2B;
+}
+
+.box #sign-up-btn {
+  padding: 0.5rem;
+  background-color: #2A2B2B;
+  color: #fb7185;
+  font-weight: 600;
+  border: #2A2B2B solid 1px;
+  border-radius: 5px;
+}
+
+.box #sign-up-btn:hover {
+  background-color: #ffffff;
+  color: #2A2B2B;
+}
+/* Social Media Links */
+.social-media-footer {
+  text-align: center;
+  display: inline;
+ }
+ 
+ .social-media {
+   display: none;
+ }
+ 
+ .social-logo-footer {
+   width: 2rem;
+   margin-top: 1rem;
+   margin-bottom: 0.3rem;
+   margin-right: 0.6rem;
+   margin-left: 0.6rem;
+   transition: all 0.5s ease-in-out;
+ }
+ .social-logo-footer:hover {
+  transform: scale(1.1);
+}
+ /* footer */
+ footer {
+  background-color: #2A2B2B;
+  text-align: center;
+  }
+  
+  footer p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: #ffffff;
+  }
+  
+  footer table {
+  display: none;
+  }
+  
+  
+  footer .credit-link, footer .covid-footer {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #d1d5db;
+    font-size: 0.8rem;
+    display: block;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  footer .credit-link:hover, footer .covid-footer:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    transform: scale(1.01);
+  }
+  /* Deals page */
+  .deal-title {
+    text-align: center;
+  }
+  .deal-title img {
+    width: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  .deal-title h1 span {
+    color: #fb7185;
+    text-decoration: underline;
+  }
+  .deal-title h1 {
+    margin-bottom: 1rem;
+  }
+  .deal-title p {
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+  }
+  .deal-photo img {
+    width:  100%;
+  }
+  .hide {
+    display: none;
+  }
+  .box-hide {
+    display: none;
+  }
+  .deal-box-four {
+    text-align: center;
+    height: 23rem;
+    margin-top: -2rem;
+  }
+  .deal-box-four h2 {
+    padding-top: 3rem;
+  }
+  .price {
+    font-weight: 600;
+    padding-top: 1rem;
+  }
+  .more-info-link {
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  .more-info-link:hover {
+    text-decoration: underline;
+  }
+  .link-white {
+    color: #fb7185;
+  }
+  
+  .link-black {
+    color: #2A2B2B;
+  }
+ .deal-box-four p {
+  margin-bottom: 2rem;
+ }
+  
+  /* Top Page Icon*/
+.top-page {
+  position: fixed;
+  bottom: 1cm;
+  left: 1cm;
+  background-color: #2A2B2B;
+  padding: 1rem;
+  border-radius: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.top-page:hover {
+  transform: scale(1.1);
+}
+.top-page {
+  width: 4rem;
+  height: 4rem;
+}
+
+.top-page img {
+  width: 2rem;
+  height: 2rem;
+}
+/* Book Now Page */
+.booknow-heading, .contact-us, .credits-page {
+padding: 2rem;
+background: #fb7185;
+}
+.booking-page, .contact-us-section, .credits {
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+}
+.booking-page h1, .contact-us-section h1, .credits h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.booking-page h1 span, .credits h1 span{
+  color: #fb7185;
+  text-decoration: underline;
+}
+.booking-page p, .contact-us-form p, .credits p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.booking-page label, .contact-us-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 400;
+}
+.booking-page input, .booking-page select, .contact-us-form input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.2rem;
+  font-family: 'Montserrat', 'Ariel', sans-serif;
+  margin-bottom: 0.4rem;
+}
+.booking-page input[type=submit], .contact-us-form input[type=submit] {
+  width: 30%;
+  margin-top: 1.5rem;
+  margin-left: 35%;
+  background-color: #fb7185;
+  border-color: #d1d5db;
+  font-weight: 500;
+  transition: background-color 0.5s ease-in-out;
+}
+.booking-page input[type=submit]:hover, .contact-us-form input[type=submit]:hover {
+  background-color: #2A2B2B;
+  color: #ffffff;
+  transform: scale(1.01);
+}
+.term-conditions {
+  text-align: center;
+  margin-top: 1rem;
+}
+.term-conditions a {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #2A2B2B;
+}
+.term-conditions a:hover {
+  text-decoration: underline;
+}
+.booking-page input:focus, .booking-page select:focus, .contact-us-form input:focus {
+  border-color: #adb0b6;
+}
+#staff-form-notice {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+.credits ul {
+  list-style: none;
+}
+
+.credits ul li {
+  margin-bottom: 0.8rem;
+}
+.credits ul li span {
+  font-weight: 500;
+}
+.credits ul li a {
+  text-decoration: none;
+  color: #2A2B2B;
+}
+.credits ul li a:hover {
+  text-decoration: underline;
+}
+.credit-link {
+  font-size: 0.7em;
+}

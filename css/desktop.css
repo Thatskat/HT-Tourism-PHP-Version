@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ body, html {
+  font-family: 'Montserrat', 'Ariel', sans-serif;
+ }
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.float-clear {
+  clear: both;
+}
+
+  /* colourings */
+.bg-pink {
+  background-color: #fb7185;
+}
+
+.bg-black {
+  background-color: #2A2B2B;
+  color: #fb7185;
+}
+/* Buttons */
+.btn {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+}
+
+.btn-dark {
+  background-color: #2A2B2B;
+}
+
+.btn-dark:hover {
+  color: #2A2B2B;
+  background-color: #ffffff;
+}
+
+.btn-light {
+  background-color: #fb7185;
+}
+
+.btn-light:hover {
+  color: #fb7185;
+  background-color: #ffffff;
+}
+
+.btn-pink-hover:hover {
+  background-color: #fb7185;
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: #2A2B2B;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.navbar .left-navbar {
+  float: left;
+}
+
+.navbar .right-navbar {
+  float: right;
+  margin-top: 1.7rem;
+
+}
+
+.navbar .right-navbar li, .navbar .left-navbar li {
+  list-style: none;
+  display: inline;
+  margin-left: 2rem;
+}
+
+.navbar .left-navbar li a img {
+  width: 4.5rem;
+  margin-left: 3rem;
+  transition: all 1s cubic-bezier(0, 0.3, 0.87, 1.22);
+}
+.navbar .left-navbar li a img:hover {
+  transform: scale(1.15);
+}
+
+.dropdown img {
+  display: none;
+}
+
+.left-image {
+  margin-top: -1.8rem;
+}
+
+.navbar .right-navbar li a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 1.2rem;
+  text-align: center;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.navbar .right-navbar li a:hover{
+  color: #2A2B2B;
+  background-color: #fb7185;
+  transform: scale(1.2);
+}
+
+/* footer */
+footer {
+  background-color: #2A2B2B;
+  color: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+footer table {
+  text-align: center;
+  margin-left: 22%;
+  margin-bottom: 1rem;
+}
+
+footer table th {
+  padding-right: 4rem;
+}
+
+footer table td {
+  padding-right: 4rem;
+}
+
+footer .credit-link {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #d1d5db;
+  transition: all 0.4s ease-in-out;
+}
+
+footer .credit-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+
+/* home image */
+#main-home-image, #contact-image {
+  display: inline;
+
+}
+
+#main-home-image img, #contact-image img{
+  width: 50%;
+}
+
+#main-home-info, #contact-info {
+  float: right;
+  width: 50%;
+}
+
+#main-home-info h1, #contact-info h1 {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+#main-home-info p, #contact-info p {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+}
+
+#main-home-info h1 span, .deals-heading h1 span, .credits-heading h1 span, .credits h1 span, #contact-info h1 span {
+  color: #fb7185;
+  text-decoration: underline;
+}
+
+/* Home page 3-box section */
+.three-box-home {
+  display: inline;
+}
+
+.box {
+  float: left;
+  width: 33.333%;
+  height: 20rem;
+  text-align: center;
+}
+
+.box h2 {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.box .home-icons {
+  padding-top: 1rem;
+}
+
+.box p {
+ margin-bottom: 2rem;
+ margin-left: 1rem;
+ margin-right: 1rem;
+ font-size: 0.9em;
+}
+
+.box label {
+  font-weight: 600;
+  float: left;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.box #email-promo {
+  padding: 0.5rem;
+  width: 65%;
+  border: #2A2B2B solid 1px;
+  border-radius: 5px;
+}
+
+.box #email-promo:target {
+  background-color: #2A2B2B;
+}
+
+.box #sign-up-btn {
+  padding: 0.5rem;
+  background-color: #2A2B2B;
+  color: #fb7185;
+  font-weight: 600;
+  border: #2A2B2B solid 1px;
+  border-radius: 5px;
+}
+
+.box #sign-up-btn:hover {
+  background-color: #ffffff;
+  color: #2A2B2B;
+}
+
+/* Home Icons */
+.home-icons {
+  width: 4rem;
+}
+
+/* Social Media Links */
+.social-logo {
+  width: 2rem;
+  margin: 0.4rem;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+.social-logo:hover {
+  transform: scale(1.1);
+}
+
+.social-media {
+  position: fixed;
+  bottom: -0.7cm;
+  right: 0;
+  background-color: #2A2B2B;
+  padding: 1.5rem;
+  border-radius: 30px;
+}
+
+.social-media-footer {
+  display: none;
+}
+
+/* Top Page Icon*/
+.top-page {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #2A2B2B;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+/* Deal heading */
+.deals-heading {
+  text-align: center;
+}
+
+.deal-title {
+  width: 49%;
+  padding: 2rem;
+  height: 300px;
+  display: inline;
+  float: left;
+}
+
+.deal-title h1 {
+  margin-bottom: 1rem;
+}
+
+.deal-icon {
+  width: 5rem;
+  margin-bottom: 2rem;
+}
+
+.deal-photo {
+  width: 50%;
+  float: right;
+  display: inline;
+
+}
+
+.deal-photo img {
+  width: 100%;
+}
+
+/* Deal Box Line One */
+.deal-line-one {
+  display: inline;
+  text-align: center;
+}
+
+.deal-box-four {
+ width: 25%;
+ float: left;
+ height: 25rem;
+}
+
+.deal-box-four h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.deal-box-four p {
+  margin-left: 1rem;
+ margin-right: 1rem;
+  margin-bottom: 2.4rem;
+  margin-top: 1rem;
+  font-size: 0.9em;
+}
+
+.deal-box-four .price {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+} 
+
+.deal-box-four img{
+  width: 100%;
+  height: 100%;
+}
+
+.more-info-link {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+.link-black {
+  color: #2A2B2B;
+}
+
+.link-black:hover {
+  text-decoration: underline;
+}
+
+.link-white {
+  color: #fb7185;
+}
+
+.link-white:hover {
+  text-decoration: underline;
+}
+
+ /* Book Now Page */
+ .booknow-heading, .contact-us, .credits-page {
+  padding: 2rem;
+  background-color: #fb7185;
+  }
+
+  .booking-page, .contact-us-section, .credits {
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+  }
+  .booking-page h1, .contact-us-section h1, .credits h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .booking-page h1 span, .credits h1 span{
+    color: #fb7185;
+    text-decoration: underline;
+  }
+  .booking-page p, .contact-us-form p, .credits p {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .booking-page label, .contact-us-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 400;
+  }
+  .booking-page input, .booking-page select, .contact-us-form input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.2rem;
+    font-family: 'Montserrat', 'Ariel', sans-serif;
+    margin-bottom: 0.4rem;
+  }
+  .booking-page input[type=submit], .contact-us-form input[type=submit] {
+    width: 30%;
+    margin-top: 1.5rem;
+    margin-left: 35%;
+    background-color: #fb7185;
+    border-color: #d1d5db;
+    font-weight: 500;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .booking-page input[type=submit]:hover, .contact-us-form input[type=submit]:hover {
+    background-color: #2A2B2B;
+    color: #ffffff;
+    transform: scale(1.01);
+  }
+  .term-conditions {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .term-conditions a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #2A2B2B;
+  }
+  .term-conditions a:hover {
+    text-decoration: underline;
+  }
+  .booking-page input:focus, .booking-page select:focus, .contact-us-form input:focus {
+    border-color: #adb0b6;
+  }
+  #staff-form-notice {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+  .credits ul {
+    list-style: none;
+  }
+  
+  .credits ul li {
+    margin-bottom: 0.8rem;
+  }
+  .credits ul li span {
+    font-weight: 500;
+  }
+  .credits ul li a {
+    text-decoration: none;
+    color: #2A2B2B;
+  }
+  .credits ul li a:hover {
+    text-decoration: underline;
+  }
+
+.covid-footer {
+  display: none;
+}
+
+.credit-link {
+  font-size: 0.7em;
+}
+
